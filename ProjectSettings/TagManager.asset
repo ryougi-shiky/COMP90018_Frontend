@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
   - Enemy
   - Boss Bullet
   - PlayerBullet
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,11 +15,11 @@ TagManager:
   - 
   - Water
   - UI
-  - Background
-  - Player
-  - Boss
-  - Player Bullets
-  - Boss Bullets
+  - PlayerBullets
+  - EnemyBullets
+  - 
+  - 
+  - 
   - 
   - 
   - 

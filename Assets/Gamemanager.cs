@@ -42,6 +42,14 @@ public class Gamemanager : MonoBehaviour
         m_text_max.text = m_max.ToString();
     }
 
+    public void UpdateMaxScore()
+    {
+        m_max = leaderboard.highestScore;
+        m_text_max.text = m_max.ToString();
+    }
+
+
+
     // Update is called once per frame
     void Update()
     {
@@ -55,6 +63,7 @@ public class Gamemanager : MonoBehaviour
         //{
         //    texts[i].text = score_list[i].ToString();
         //}
+        UpdateMaxScore();
         leaderboard.playerName = nameInputField.text;
         leaderboard.playerScore = m_score;
         leaderboard.OnRegisterButtonClicked();
@@ -79,12 +88,12 @@ public class Gamemanager : MonoBehaviour
     {
         objs[i].SetActive(false);
     }
-    //��������������Ϳ����˳���Ϸ
+ 
     public void ExitGame()
     {
         Application.Quit();
     }
-    //��������������Ϳ������¿�ʼ��Ϸ
+  
     public void RestartGame()
     {
       SceneManager.LoadScene(0);
