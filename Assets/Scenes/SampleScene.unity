@@ -1444,9 +1444,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481636e19da5a8a47be1a6f0abfe692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
   bulletPool: {fileID: 315755739}
-  fireRate: 0.3
-  bulletSpeed: 10
+  microphoneinput: {fileID: 0}
+  fireRate: 0.7
+  bulletSpeed: 1
 --- !u!1 &443642718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &483099617
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3677,6 +3679,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095621155}
   m_CullTransparentMesh: 1
+--- !u!1 &1147477670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147477671}
+  - component: {fileID: 1147477672}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1147477671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147477670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 21, z: -0.36436725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1147477672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147477670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7721c5cff413aed4ebc08c34837dd3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit_cnt: 0
+  boss: {fileID: 483099616}
+  enemyPrefab: {fileID: 4064787169736124645, guid: adbec709a287bd44bbb6ae8e0ab2427a, type: 3}
+  spawnInterval: 2
 --- !u!1 &1177411057
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +4797,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641735743}
   m_CullTransparentMesh: 1
+--- !u!1 &1664758671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664758673}
+  - component: {fileID: 1664758672}
+  m_Layer: 0
+  m_Name: MicrophoneInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1664758672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664758671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0513d56e7acc5a41bad033133b67c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseBulletSpeed: 1
+  maxBulletSpeed: 20
+  microphoneSensitivity: 0.1
+--- !u!4 &1664758673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664758671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.067276, y: 0.40098846, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1665925304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,7 +5661,7 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.00002193451}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5620,7 +5717,7 @@ GameObject:
   - component: {fileID: 2042168368}
   - component: {fileID: 2042168376}
   - component: {fileID: 2042168375}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5781,7 +5878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e1dc0ff97f09b48be87871f1ed4c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_life: 50
+  m_life: 100
   m_slider_hp: {fileID: 1764618242}
   m_explosionFX: {fileID: 100000, guid: fd0604056527c68458f893a5f9dc89e6, type: 3}
 --- !u!114 &2042168376
