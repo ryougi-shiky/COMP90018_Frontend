@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 5475347261732347234}
   - component: {fileID: 1326507366156393177}
   - component: {fileID: 9164066501912809355}
+<<<<<<< HEAD
   m_Layer: 6
+=======
+  m_Layer: 7
+>>>>>>> main
   m_Name: KroniiBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -161,4 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d435d5758324739428983c48bc52365d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   power: 20
+=======
+  power: 10
+>>>>>>> main

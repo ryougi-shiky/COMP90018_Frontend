@@ -8,7 +8,10 @@ TagManager:
   - Boss Bullet
   - PlayerBullet
   - Bullet
+<<<<<<< HEAD
   - SmallEnemy
+=======
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
