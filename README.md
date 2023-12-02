@@ -1,4 +1,6 @@
-# How to Open & Run
+A simple Unity Android shooting game
+
+### How to Open & Run
 
 1. Download and open Unity Hub
 2. Create a Unity project in version 2022.3.0f1
@@ -9,5 +11,5 @@
 7. Install the .apk on your Android
 
 
-# Server
+### Server
 Please check `https://github.com/ryougi-shiky/COMP90018_Backend`
