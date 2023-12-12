@@ -12,4 +12,4 @@ A simple Unity Android shooting game
 
 
 ### Server
-Please check `https://github.com/ryougi-shiky/COMP90018_Backend`
+Please check https://github.com/ryougi-shiky/COMP90018_Backend
